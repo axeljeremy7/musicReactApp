@@ -10,7 +10,7 @@ const Sidebar = () => {
         <Grid width='150px' backgroundColor='black'>
             {pages.map((item, index) => 
                 {
-                    return index !== (pages.length - 1) && <NavLink key={index} to={item.routeProps.path} activeClassName='activeLink'><Grid >{item.name}</Grid></NavLink>
+                    return <NavLink key={index} to={item.routeProps.path} activeClassName='activeLink'><Grid >{item.name}</Grid></NavLink>
                 })
             }
         </Grid>
