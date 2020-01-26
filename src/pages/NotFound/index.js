@@ -12,7 +12,6 @@ export default {
     routeProps: {
         path: '/',
         component: NotFound,
-        exact: false,
     },
     name: 'NotFound',
 };

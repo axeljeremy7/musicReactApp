@@ -14,9 +14,7 @@ function App() {
         <Grid>
           <Switch>
           { pages.map((page, index) => (<Route {...page.routeProps} key={index} />)) }
-         
-          </Switch>
-            
+          </Switch>    
         </Grid>
         </Grid>
     </Router>

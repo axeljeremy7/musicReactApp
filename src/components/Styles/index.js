@@ -30,7 +30,7 @@ export const Grid = styled.div`
     margin: ${props=>props.margin ? props.margin : '0'};
     border: ${props=>props.border ? props.border : 'unset'};
     border-radius: ${props=>props.borderRadius ? props.borderRadius : 'unset'};
-    font-family: circe-rounded;
+    font-family: ${props=>props.fontFamily ? props.fontFamily : 'inherit'};
     font-size: ${props=>props.fontSize ? props.fontSize : '14px'};
     font-weight: ${props=>props.fontWeight ? props.fontWeight : 'normal'};
     color: ${props=>props.color ? props.color : 'inherit'};

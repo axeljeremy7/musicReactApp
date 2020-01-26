@@ -4,7 +4,7 @@ const Artist = () => {
     let params = useParams();
     return (
         <div>
-            Requested Artist ID: {JSON.stringify(params)}
+            Requested Artist: {JSON.stringify(params)}
         </div>
     )
 }
@@ -13,8 +13,9 @@ export default {
     routeProps: {
         path: '/Artists/:artistId',
         component: Artist,
-        exact: true
         
     },
     name: 'Artist',
 };
+
+// export default Artist;
