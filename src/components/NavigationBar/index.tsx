@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Grid} from '../Styles';
 import Pulse from '../Icons/pulse';
 import styled from 'styled-components';
 import Search from '../Search';
 import Upload from "../Icons/upload";
+import {ToggleSidebarContext} from "../../context/toggleSidebar"
 
 const TopNavBar = styled(Grid)`
     position: -webkit-sticky;
@@ -13,9 +14,12 @@ const TopNavBar = styled(Grid)`
 `;
 
 const NavigationBar = () => {
+    const toggleSidebar = useContext(ToggleSidebarContext)
+
     return (
         <TopNavBar templateColumns='1fr 1fr 1fr' backgroundColor='var(--custom-black)' color='white' padding='16px 32px 16px 32px' height='60px'>
-          <Grid width='32px'>
+          <Grid width='32px' 
+            onClick={()=> toggleSidebar.dispatch({type:'setShow'})}>
               <Pulse color='white'/>
           </Grid>  
           <Grid textAlign='center' fontSize='32px'>

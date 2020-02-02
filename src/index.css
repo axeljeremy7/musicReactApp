@@ -14,7 +14,7 @@
   --custom-black:#2f2d2b;
   --custom-bg-black: #232323;
   --custom-grey: #e3e1e1;
-  --custom-yellow: #ffcc00;
+  --custom-yellow: #ffc107;
   --aurora: #66717E;
   --gunmetal: #26343E;
   --japanese-indigo: #274060;
@@ -24,9 +24,11 @@
   --spanish-grey: #99928B;
   --independence: #3A516E;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
