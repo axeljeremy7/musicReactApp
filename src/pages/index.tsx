@@ -10,6 +10,15 @@ import Music from './Music';
 import MusicVenues from './MusicVenues';
 import NotFound from './NotFound';
 
+export interface IPage {
+    routeProps: {
+        path: string,
+        component: React.FC
+        exact?: boolean
+    },
+    name: String
+}
+
 export const sidebarPages = [
     Artists,
     DJs,
@@ -20,7 +29,8 @@ export const sidebarPages = [
     MusicVenues,
 ];
 
-export default [
+
+const Pages: Array<IPage> = [
     Artist,
     Artists,
     DJs,
@@ -31,3 +41,5 @@ export default [
     MusicVenues,
     NotFound
 ];
+
+export default Pages;

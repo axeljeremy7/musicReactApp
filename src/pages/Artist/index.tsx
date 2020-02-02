@@ -1,6 +1,8 @@
 import React from 'react'
 import {useParams} from 'react-router-dom';
-const Artist = () => {
+import {IPage} from "../index";
+
+const Artist:React.FC = () => {
     let params = useParams();
     return (
         <div>
@@ -9,7 +11,7 @@ const Artist = () => {
     )
 }
 
-export default {
+const Page: IPage = {
     routeProps: {
         path: '/Artists/:artistId',
         component: Artist,
@@ -18,4 +20,4 @@ export default {
     name: 'Artist',
 };
 
-// export default Artist;
+export default Page;

@@ -1,6 +1,7 @@
 import React from 'react'
+import {IPage} from '../index';
 
-const Events = () => {
+const Events: React.FC = () => {
     return (
         <div>
             Events
@@ -8,7 +9,7 @@ const Events = () => {
     )
 }
 
-export default {
+const Page: IPage =   {
     routeProps: {
         path: '/Events',
         component: Events,
@@ -16,3 +17,5 @@ export default {
     },
     name: 'Events',
 };
+
+export default Page

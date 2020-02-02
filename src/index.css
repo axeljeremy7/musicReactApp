@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&display=swap');
-body {
+@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&display=swap&subset=latin-ext');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,11 +9,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: 'Cairo';
+  --eerie-black: #66717E;
+  --charleston-green: #29292B;
+  --custom-black:#2f2d2b;
+  --custom-bg-black: #232323;
+  --custom-grey: #e3e1e1;
+  --custom-yellow: #ffcc00;
+  --aurora: #66717E;
+  --gunmetal: #26343E;
+  --japanese-indigo: #274060;
+  --dazzle-blue: #335C81;
+  --yellow: #FFD400;
+  --blue-sapphire: #1F5673;
+  --spanish-grey: #99928B;
+  --independence: #3A516E;
+  overflow-x: hidden;
 }
 
 code {
