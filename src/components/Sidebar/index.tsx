@@ -23,7 +23,7 @@ const Column = styled(Grid)`
     }
 
     a.activeLink {
-        background-color: var(--yellow);
+        background-color: var(--custom-yellow);
         text-decoration: none;
     }
 
