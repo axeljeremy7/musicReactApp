@@ -20,10 +20,10 @@ export interface IPage {
 }
 
 export const sidebarPages = [
+    Home,
     Artists,
     DJs,
     Events,
-    Home,
     Library,
     Music,
     MusicVenues,
@@ -31,11 +31,11 @@ export const sidebarPages = [
 
 
 const Pages: Array<IPage> = [
+    Home,
     Artist,
     Artists,
     DJs,
     Events,
-    Home,
     Library,
     Music,
     MusicVenues,

@@ -9,6 +9,6 @@ export interface ISVG {
 
 export const SVG = styled.svg`
     &:hover {
-        fill: var(--custom-yellow);
+        fill: var(--yellow);
     }
 `;

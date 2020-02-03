@@ -5,7 +5,12 @@ import NavigationBar from "./components/NavigationBar";
 import Sidebar from "./components/Sidebar";
 import Pages from "./pages";
 import {ToggleSidebarContext, ToggleSidebarInitState, ToggleSidebarReducer} from "./context/toggleSidebar";
+import styled from "styled-components";
 
+const Content = styled(Grid)`
+  transition: width 0.3s ease-in-out;
+  overflow-y: auto;
+`;
 
 const App: React.FC = () => {
   const [state, dispatch] = React.useReducer(ToggleSidebarReducer, ToggleSidebarInitState);
@@ -14,15 +19,15 @@ const App: React.FC = () => {
     <Router>
       <ToggleSidebarContext.Provider value={{state, dispatch}}>
       <NavigationBar></NavigationBar>
-      <Grid templateColumns="150px auto">
+      <Grid templateColumns={state.show ? "150px calc(100vw - 150px)" : "0px calc(100vw)"} alignItems='start'>
         <Sidebar></Sidebar>
-        <Grid>
+        <Content width='100%' alignItems='start' padding='20px' backgroundColor='var(--dark-medium-grey)' height='calc(100vh - 60px)'>
           <Switch>
             {Pages.map((page, index) => (
               <Route {...page.routeProps} key={index} />
             ))}
           </Switch>
-        </Grid>
+        </Content>
       </Grid>
       </ToggleSidebarContext.Provider>
     </Router>

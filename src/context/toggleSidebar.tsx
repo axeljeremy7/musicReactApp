@@ -29,6 +29,6 @@ export const ToggleSidebarReducer: Reducer<ToggleSidebarProps, Actions> = (state
 };
 
 export const ToggleSidebarInitState: ToggleSidebarProps = {
-    show: false
+    show: true
 };
 

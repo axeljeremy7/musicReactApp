@@ -10,7 +10,7 @@ import Twitter from '../Icons/twitter';
 import {ToggleSidebarContext} from "../../context/toggleSidebar";
 
 const Column = styled(Grid)`
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;;
     
     a {
         text-decoration: none;
@@ -23,7 +23,7 @@ const Column = styled(Grid)`
     }
 
     a.activeLink {
-        background-color: var(--custom-yellow);
+        background-color: var(--yellow);
         text-decoration: none;
     }
 
@@ -34,8 +34,8 @@ const Sidebar:React.FC = () => {
     
     return (
         <Column id='#sidebar' 
-            width={toggleSidebar.state.show === false ? '150px' : '0px'}
-            height='calc(100vh - 60px)' backgroundColor='var(--custom-black)' color='white' padding='20px 0 0 0' templateRows='repeat(7, 52px) 328px'>
+            width={toggleSidebar.state.show ? '150px' : '0px'}
+            height='calc(100vh - 60px)' backgroundColor='var(--charleston-green-dark)' color='white' padding='20px 0 0 0' templateRows='repeat(7, 52px) 328px'>
             {pages.map((item : any, index: number) => 
                 {
                     return (<NavLink key={index} to={item.routeProps.path} activeClassName='activeLink'>

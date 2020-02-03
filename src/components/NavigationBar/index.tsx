@@ -17,7 +17,7 @@ const NavigationBar = () => {
     const toggleSidebar = useContext(ToggleSidebarContext)
 
     return (
-        <TopNavBar templateColumns='1fr 1fr 1fr' backgroundColor='var(--custom-black)' color='white' padding='16px 32px 16px 32px' height='60px'>
+        <TopNavBar templateColumns='1fr 1fr 1fr' backgroundColor='var(--charleston-green-dark)' color='white' padding='16px 32px 16px 32px' height='60px'>
           <Grid width='32px' 
             onClick={()=> toggleSidebar.dispatch({type:'setShow'})}>
               <Pulse color='white'/>

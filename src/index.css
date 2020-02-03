@@ -11,20 +11,20 @@
   -moz-osx-font-smoothing: grayscale;
   --eerie-black: #66717E;
   --charleston-green: #29292B;
-  --custom-black:#2f2d2b;
-  --custom-bg-black: #232323;
-  --custom-grey: #e3e1e1;
-  --custom-yellow: #FFC107;
+  --charleston-green-dark:#2f2d2b;
+  --dark-medium-grey: #232323;
+  --platinum: #e3e1e1;
+  --yellow: #FFC107;
   --aurora: #66717E;
   --gunmetal: #26343E;
   --japanese-indigo: #274060;
   --dazzle-blue: #335C81;
-  --yellow: #FFD400;
   --blue-sapphire: #1F5673;
   --spanish-grey: #99928B;
   --independence: #3A516E;
   overflow-x: hidden;
   overflow-y: hidden;
+  text-decoration: none;
 }
 
 code {

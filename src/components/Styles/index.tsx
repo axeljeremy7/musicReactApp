@@ -40,6 +40,7 @@ interface GridProps {
     readonly width?: string;
     readonly height?: string;
     readonly cursor?: string;
+    readonly lineHeight?: string;
   };
 
 export const Grid = styled.div<GridProps>`
@@ -53,6 +54,7 @@ export const Grid = styled.div<GridProps>`
     justify-self: ${props=>props.justifySelf ? props.justifySelf : 'normal'};
     width: ${props=>props.width ? props.width : 'auto'};
     height: ${props=>props.height ? props.height : 'auto'};
+    line-height: ${props=>props.lineHeight ? props.lineHeight : 'normal'};
     padding: ${props=>props.padding ? props.padding : '0'};
     margin: ${props=>props.margin ? props.margin : '0'};
     border: ${props=>props.border ? props.border : 'unset'};
