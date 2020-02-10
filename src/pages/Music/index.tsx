@@ -42,8 +42,8 @@ const AlbumArray: Array<IAlbum> = [
   {
     id: 7,
     img:
-      "https://i.pinimg.com/originals/1b/fb/be/1bfbbe210fc438c8a13c092fdb2fcd76.jpg",
-    name: "Huncho Jack"
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg",
+    name: "Beerbongs & Bentleys"
   },
   {
     id: 8,

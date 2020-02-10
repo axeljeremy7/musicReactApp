@@ -8,6 +8,7 @@ import Music from "./Music";
 import MusicVenues from "./MusicVenues";
 import NotFound from "./NotFound";
 import Album from './Album';
+import Upload from './Upload';
 
 export interface IPage {
   routeProps: {
@@ -25,7 +26,7 @@ export const sidebarPages = [
   DJs,
   Events,
   Library,
-  MusicVenues
+  MusicVenues,
 ];
 
 const Pages: Array<IPage> = [
@@ -38,6 +39,7 @@ const Pages: Array<IPage> = [
   Events,
   Library,
   MusicVenues,
+  Upload,
   NotFound
 ];
 
