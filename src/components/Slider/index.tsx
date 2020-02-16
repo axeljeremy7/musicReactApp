@@ -78,7 +78,7 @@ const Slider: React.FC<ISlider> = ({array , title, borderRadius = 'unset', type 
                             <Image 
                                 width={toggleSidebar.state.show ? 'calc(calc(100vw - 150px - 40px - 40px - 112px) / 8)' : 'calc(calc(100vw - 40px - 40px - 112px) / 8)'}
                                 height={toggleSidebar.state.show ? 'calc(calc(100vw - 150px - 40px - 40px  - 112px) / 8)' : 'calc(calc(100vw - 40px - 40px - 112px) / 8)'}
-                                src={"item.img"}
+                                src={item.img} 
                                 borderRadius={borderRadius}
                                 className='show'/>
                             <Grid cursor='pointer' height='16px' fontSize='10px' lineHeight='16px' textAlign='center' color='var(--platinum)'>{item.name}</Grid>
