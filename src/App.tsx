@@ -18,9 +18,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <ToggleSidebarContext.Provider value={{state, dispatch}}>
-      <NavigationBar></NavigationBar>
+      <NavigationBar/>
       <Grid templateColumns={state.show ? "150px calc(100vw - 150px)" : "0px calc(100vw)"} alignItems='start'>
-        <Sidebar></Sidebar>
+        <Sidebar/>
         <Content width='100%' alignItems='start' padding='20px' backgroundColor='var(--dark-medium-grey)' height='calc(100vh - 60px)'>
           <Switch>
             {Pages.map((page, index) => (
