@@ -145,7 +145,7 @@ const ArtistsArray: Array<IArtist> = [
 
 const Artists: React.FC = () => {
   return (
-    <Grid alignItems="start" width="100%">
+    <Grid alignItems="start" width="100%" padding="20px">
       <Grid
         fontSize="28px"
         fontWeight="700"

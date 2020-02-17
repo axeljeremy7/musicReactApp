@@ -10,7 +10,11 @@ import Twitter from "../Icons/twitter";
 import { ToggleSidebarContext } from "../../context/toggleSidebar";
 
 const Column = styled(Grid)`
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in;
+
+  div.item-name {
+    transition: all 0.2s ease-in;
+  }
 
   a {
     text-decoration: none;
@@ -52,7 +56,7 @@ const Sidebar: React.FC = () => {
             to={item.routeProps.path}
             activeClassName="activeLink"
           >
-            <Grid color="white" height="52px" padding="10px" fontSize="18px">
+            <Grid className='item-name' color="white" height="52px" padding="10px" fontSize="18px">
               {item.name}
             </Grid>
           </NavLink>

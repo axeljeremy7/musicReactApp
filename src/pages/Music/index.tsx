@@ -144,7 +144,7 @@ const AlbumArray: Array<IAlbum> = [
 
 const Music: React.FC = () => {
   return (
-    <Grid alignItems="start" width="100%">
+    <Grid alignItems="start" width="100%" padding="20px">
       <Grid
         fontSize="28px"
         fontWeight="700"

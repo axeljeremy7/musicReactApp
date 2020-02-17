@@ -40,6 +40,7 @@ interface GridProps {
   readonly height?: string;
   readonly cursor?: string;
   readonly lineHeight?: string;
+  readonly backgroundImage?: string;
 }
 
 export const Grid = styled.div<GridProps>`
@@ -72,6 +73,7 @@ export const Grid = styled.div<GridProps>`
     props.textDecoration ? props.textDecoration : "unset"};
   text-align: ${props => (props.textAlign ? props.textAlign : "unset")};
   cursor: ${props => (props.cursor ? props.cursor : "auto")};
+  background-image: ${props => (props.backgroundImage ? props.backgroundImage : "unset")};
 `;
 
 interface ImageProps {

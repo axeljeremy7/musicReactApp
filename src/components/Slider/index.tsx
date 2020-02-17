@@ -29,7 +29,7 @@ const Image = styled.img<ImageProps>`
     background-color: ${props=>props.backgroundColor ? props.backgroundColor : 'inherit'}; 
     
     &.show {
-        animation: fadeIn ease-in-out 2s;
+        animation: fadeIn ease-in-out 1s;
     }
 
     @keyframes fadeIn {

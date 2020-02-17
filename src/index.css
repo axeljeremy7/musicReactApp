@@ -1,33 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&display=swap&subset=latin-ext");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Cairo", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --charleston-green: #29292B;
-  --charleston-green-dark:#2f2d2b;
+  --charleston-green: #29292b;
+  --charleston-green-dark: #2f2d2b;
   --dark-medium-grey: #232323;
   --platinum: #e3e1e1;
-  --yellow: #FFC107;
-  --aurora: #66717E;
-  --gunmetal: #26343E;
+  --yellow: #ffc107;
+  --aurora: #66717e;
+  --gunmetal: #26343e;
   --japanese-indigo: #274060;
-  --dazzle-blue: #335C81;
-  --blue-sapphire: #1F5673;
-  --spanish-grey: #99928B;
-  --independence: #3A516E;
+  --dazzle-blue: #335c81;
+  --blue-sapphire: #1f5673;
+  --spanish-grey: #99928b;
+  --independence: #3a516e;
   overflow-x: hidden;
   overflow-y: hidden;
   text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-fit {
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

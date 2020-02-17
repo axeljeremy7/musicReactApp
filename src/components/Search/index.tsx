@@ -18,7 +18,7 @@ const Input = styled.input`
 `;
 
 const Search: React.FC<Props> = () => {
-  return <Input placeholder="Search ..." name="search" type="text"/>;
+  return <Input placeholder="Search ..." name="search" type="text" maxLength={255}/>;
 };
 
 export default Search;
