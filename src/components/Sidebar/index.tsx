@@ -71,22 +71,22 @@ const Sidebar: React.FC = () => {
           Follow Us!
         </Grid>
         <Grid justifyContent="center">
-          <a className='no-hover' href="https://www.mundodeportivo.com/" target="_blank" rel="noopener noreferrer">
+          <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
             <Snapchat color="white" height="44px" width="44px"></Snapchat>
           </a>
         </Grid>
         <Grid justifyContent="center">
-          <a className='no-hover' href="https://www.mundodeportivo.com/" target="_blank" rel="noopener noreferrer">
+          <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
             <Instagram color="white" height="44px" width="44px"></Instagram>
           </a>
         </Grid>
         <Grid justifyContent="center">
-          <a className='no-hover' href="https://www.mundodeportivo.com/" target="_blank" rel="noopener noreferrer">
+          <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
             <Facebook color="white" height="44px" width="44px"></Facebook>
           </a>
         </Grid>
         <Grid justifyContent="center">
-          <a className='no-hover' href="https://www.mundodeportivo.com/" target="_blank" rel="noopener noreferrer">
+          <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
             <Twitter color="white" height="44px" width="44px"></Twitter>
           </a>
         </Grid>
