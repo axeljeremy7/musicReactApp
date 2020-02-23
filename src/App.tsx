@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useReducer} from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +15,7 @@ import {
   ToggleSidebarReducer
 } from "./context/toggleSidebar";
 import styled from "styled-components";
+import { SearchContext, SearchReducer, SearchInitialState } from "./context/searchContext";
 // import Login from './pages/Login';
 
 const Content = styled(Grid)`
@@ -23,10 +24,12 @@ const Content = styled(Grid)`
 `;
 
 const App: React.FC = () => {
-  const [state, dispatch] = React.useReducer(
+  const toggleSidebarUseReducer = useReducer(
     ToggleSidebarReducer,
     ToggleSidebarInitState
   );
+
+  const searchUseReducer = useReducer(SearchReducer, SearchInitialState);
 
   // if(localStorage.getItem('token')){
   //   return (
@@ -42,30 +45,32 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <ToggleSidebarContext.Provider value={{ state, dispatch }}>
-        <NavigationBar />
-        <Grid
-          templateColumns={
-            state.show ? "150px calc(100vw - 150px)" : "0px calc(100vw)"
-          }
-          alignItems="start"
-        >
-          <Sidebar />
-          <Content
-            width="100%"
+      <SearchContext.Provider value={{state: searchUseReducer[0], dispatch: searchUseReducer[1]}}>
+        <ToggleSidebarContext.Provider value={{ state: toggleSidebarUseReducer[0], dispatch: toggleSidebarUseReducer[1] }}>
+          <NavigationBar />
+          <Grid
+            templateColumns={
+              toggleSidebarUseReducer[0].show ? "150px calc(100vw - 150px)" : "0px calc(100vw)"
+            }
             alignItems="start"
-            backgroundColor="var(--dark-medium-grey)"
-            height="calc(100vh - 60px)"
           >
-            <Switch>
-              <Redirect from="/" to="/home" exact />
-              {Pages.map((page, index) => (
-                <Route {...page.routeProps} key={index} />
-              ))}
-            </Switch>
-          </Content>
-        </Grid>
-      </ToggleSidebarContext.Provider>
+            <Sidebar />
+            <Content
+              width="100%"
+              alignItems="start"
+              backgroundColor="var(--dark-medium-grey)"
+              height="calc(100vh - 60px)"
+            >
+              <Switch>
+                <Redirect from="/" to="/home" exact />
+                {Pages.map((page, index) => (
+                  <Route {...page.routeProps} key={index} />
+                ))}
+              </Switch>
+            </Content>
+          </Grid>
+        </ToggleSidebarContext.Provider>
+      </SearchContext.Provider>
     </Router>
   );
 };

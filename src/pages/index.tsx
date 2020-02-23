@@ -9,6 +9,7 @@ import MusicVenues from "./MusicVenues";
 import NotFound from "./NotFound";
 import Album from './Album';
 import Upload from './Upload';
+import Search from './Search';
 
 export interface IPage {
   routeProps: {
@@ -40,6 +41,7 @@ const Pages: Array<IPage> = [
   Library,
   MusicVenues,
   Upload,
+  Search,
   NotFound
 ];
 
