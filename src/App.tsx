@@ -15,7 +15,7 @@ import {
   ToggleSidebarReducer
 } from "./context/toggleSidebar";
 import styled from "styled-components";
-import Login from './pages/Login';
+// import Login from './pages/Login';
 
 const Content = styled(Grid)`
   transition: width 0.3s ease-in-out;
@@ -28,17 +28,17 @@ const App: React.FC = () => {
     ToggleSidebarInitState
   );
 
-  if(localStorage.getItem('token')){
-    return (
-      <Router>
-        <Route {...Login.routeProps} />
-        <Switch>
-              <Redirect from="/" to="/login"/>
-              <Route {...Login.routeProps} />
-            </Switch>
-      </Router>
-    );
-  }
+  // if(localStorage.getItem('token')){
+  //   return (
+  //     <Router>
+  //       <Route {...Login.routeProps} />
+  //       <Switch>
+  //             <Redirect from="/" to="/login"/>
+  //             <Route {...Login.routeProps} />
+  //           </Switch>
+  //     </Router>
+  //   );
+  // }
 
   return (
     <Router>

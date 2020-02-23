@@ -31,10 +31,10 @@ export const sidebarPages = [
 
 const Pages: Array<IPage> = [
   Home,
+  Album,
   Artist,
   Artists,
   Music,
-  Album,
   DJs,
   Events,
   Library,

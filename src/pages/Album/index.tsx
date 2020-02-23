@@ -10,7 +10,7 @@ import Play2 from "../../components/Icons/Play2";
 import Shuffle from "../../components/Icons/Shuffle";
 import Star from "../../components/Icons/Star";
 import Explicit from "../../components/Icons/Explicit";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SongRow = styled(Grid)`
   border-bottom-color: rgba(45, 45, 45, 1);
@@ -20,20 +20,36 @@ const SongRow = styled(Grid)`
 `;
 
 export interface IAlbum {
-  id: number;
-  img: string;
+  id: number | string | undefined;
   name: string;
-  songName?: string;
+  artistName?: string;
+  genre: string;
+  year: string;
+  numberOfSongs: number;
+  image: string;
 }
 
 export interface ISong {
-  id: number;
+  id: number | string | undefined;
   num: number;
   name: string;
   explicit: boolean;
   star: boolean;
   length: string;
+  album: IAlbum;
+  img: string;
 }
+
+let albumObject: IAlbum = {
+  id: 1,
+  name: "Beerbongs & Bentleys",
+  artistName: "Post Malone",
+  genre: "Pop/Hip-Hop/R&B",
+  year: "2018",
+  numberOfSongs: 18,
+  image:
+    "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
+};
 
 const songs: Array<ISong> = [
   {
@@ -42,7 +58,10 @@ const songs: Array<ISong> = [
     name: "Paranoid",
     explicit: false,
     star: false,
-    length: "3:44"
+    length: "3:44",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 2,
@@ -50,7 +69,10 @@ const songs: Array<ISong> = [
     name: "Spoil My Night",
     explicit: true,
     star: false,
-    length: "3:54"
+    length: "3:54",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 3,
@@ -58,15 +80,21 @@ const songs: Array<ISong> = [
     name: "Rich & Sad",
     explicit: true,
     star: true,
-    length: "3:14"
+    length: "3:14",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 4,
     num: 4,
-    name: 'Zack and Codeine',
+    name: "Zack and Codeine",
     explicit: true,
     star: false,
-    length: "3:23"
+    length: "3:23",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 5,
@@ -74,7 +102,10 @@ const songs: Array<ISong> = [
     name: "Takin' Shots",
     explicit: true,
     star: true,
-    length: "3:37"
+    length: "3:37",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 6,
@@ -82,7 +113,10 @@ const songs: Array<ISong> = [
     name: "Rockstar (feat. 21 Savage)",
     explicit: true,
     star: true,
-    length: "3:39"
+    length: "3:39",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 7,
@@ -90,7 +124,10 @@ const songs: Array<ISong> = [
     name: "Over Now",
     explicit: true,
     star: true,
-    length: "4:07"
+    length: "4:07",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 8,
@@ -98,7 +135,10 @@ const songs: Array<ISong> = [
     name: "Psycho (feat. Ty Dolla Sign)",
     explicit: true,
     star: true,
-    length: "3:41"
+    length: "3:41",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 9,
@@ -106,7 +146,10 @@ const songs: Array<ISong> = [
     name: "Better Now",
     explicit: true,
     star: true,
-    length: "3:50"
+    length: "3:50",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 10,
@@ -114,7 +157,10 @@ const songs: Array<ISong> = [
     name: "Ball for Me (feat. Nicki Minaj)",
     explicit: true,
     star: true,
-    length: "3:27"
+    length: "3:27",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 11,
@@ -122,7 +168,10 @@ const songs: Array<ISong> = [
     name: "Otherside",
     explicit: true,
     star: false,
-    length: "3:48"
+    length: "3:48",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 12,
@@ -130,7 +179,10 @@ const songs: Array<ISong> = [
     name: "Stay",
     explicit: true,
     star: false,
-    length: "3:28"
+    length: "3:28",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 13,
@@ -138,7 +190,10 @@ const songs: Array<ISong> = [
     name: "Blame It on Me",
     explicit: true,
     star: false,
-    length: "4:24"
+    length: "4:24",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   },
   {
     id: 14,
@@ -146,16 +201,19 @@ const songs: Array<ISong> = [
     name: "Same Bitches (feat. G-Eazy and YG)",
     explicit: true,
     star: false,
-    length: "3:31"
+    length: "3:31",
+    album: albumObject,
+    img:
+      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
   }
 ];
 
 const Album: React.FC = () => {
   let { albumId } = useParams();
-  let album = {
-    albumId: albumId,
-    albumName: "Beerbongs & Bentleys",
-    artist: "Post Malone",
+  let album: IAlbum = {
+    id: albumId,
+    name: "Beerbongs & Bentleys",
+    artistName: "Post Malone",
     genre: "Pop/Hip-Hop/R&B",
     year: "2018",
     numberOfSongs: 18,
@@ -194,10 +252,10 @@ const Album: React.FC = () => {
         rowGap="8px"
       >
         <Grid fontSize="36px" lineHeight="44px" color="var(--platinum)">
-          {album.albumName}
+          {album.name}
         </Grid>
         <Grid fontSize="32px" color="var(--platinum)" lineHeight="40px">
-          {album.artist}
+          {album.artistName}
         </Grid>
         <Grid fontSize="16px" color="var(--platinum)" lineHeight="24px">
           {album.genre} · {album.year} · {album.numberOfSongs} songs
@@ -236,16 +294,18 @@ const Album: React.FC = () => {
                 <Grid color="white" fontSize="16px">
                   {item.name}
                 </Grid>
-                <Grid>
-                  {item.star && (
+
+                {item.star && (
+                  <Grid>
                     <Star color="#66717E" width="8px" height="8px" />
-                  )}
-                </Grid>
-                <Grid>
-                  {item.explicit && (
+                  </Grid>
+                )}
+
+                {item.explicit && (
+                  <Grid>
                     <Explicit color="#66717E" width="8px" height="8px" />
-                  )}
-                </Grid>
+                  </Grid>
+                )}
               </Grid>
               <Grid color="white" fontSize="12px">
                 {item.length}
