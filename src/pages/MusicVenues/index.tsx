@@ -12,7 +12,7 @@ const Page: IPage = {
     component: MusicVenues,
     exact: true
   },
-  name: "MusicVenues"
+  name: "Music Venues"
 };
 
 export default Page;
