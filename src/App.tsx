@@ -62,7 +62,7 @@ const App: React.FC = () => {
               height="calc(100vh - 60px)"
             >
               <Switch>
-                <Redirect from="/" to="/home" exact />
+                <Redirect from="/" to="/Music" exact />
                 {Pages.map((page, index) => (
                   <Route {...page.routeProps} key={index} />
                 ))}
