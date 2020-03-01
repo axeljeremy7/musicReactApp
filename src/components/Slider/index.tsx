@@ -6,7 +6,7 @@ import Prev from "../Icons/prev";
 import Next from "../Icons/next";
 import { Link } from "react-router-dom";
 import { IArtist } from "../../pages/Artist";
-import { ISong, IAlbum } from "../../pages/Album";
+import { IAlbum } from "../../pages/Album";
 
 interface ImageProps {
   readonly display?: string;
@@ -85,7 +85,7 @@ const Slider: React.FC<ISlider> = ({
             }
           }}
         >
-          <Prev width="16px" height="16px" color="var(--platinum)"></Prev>
+          <Prev width="16px" height="16px" color="var(--platinum)"/>
         </Grid>
         {type === "artist" && (
           <Grid
@@ -192,7 +192,7 @@ const Slider: React.FC<ISlider> = ({
             }
           }}
         >
-          <Next width="16px" height="16px" color="var(--platinum)"></Next>
+          <Next width="16px" height="16px" color="var(--platinum)"/>
         </Grid>
       </Grid>
     </Grid>

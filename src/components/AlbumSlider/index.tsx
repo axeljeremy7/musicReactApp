@@ -71,7 +71,7 @@ const Slider: React.FC<ISlider> = ({
   const [state, setState] = useState({
     slideIndex: 1,
     prevIndex: 0,
-    nextIndex: 1 * numOfElements - 1
+    nextIndex: numOfElements - 1
   });
   // const numOfSlides = Math.round(array.length / numOfElements);
   // console.log({slides});
@@ -108,7 +108,7 @@ const Slider: React.FC<ISlider> = ({
             }
           }}
         >
-          <Prev width="16px" height="16px" color="var(--platinum)"></Prev>
+          <Prev width="16px" height="16px" color="var(--platinum)"/>
         </Grid>
         {type === "SONG" && (
           <Grid
@@ -150,7 +150,7 @@ const Slider: React.FC<ISlider> = ({
                             justifyContent="flex-start"
                             columnGap="8px"
                           >
-                            <Grid color="var(--platinum)" fontSize="14px" cursor='pointer'>
+                            <Grid color="var(--platinum)" fontSize={item.name.length < 20 ? "14px" : "10px"} cursor='pointer'>
                               {item.name}
                             </Grid>
                             
@@ -231,7 +231,7 @@ const Slider: React.FC<ISlider> = ({
             }
           }}
         >
-          <Next width="16px" height="16px" color="var(--platinum)"></Next>
+          <Next width="16px" height="16px" color="var(--platinum)"/>
         </Grid>
       </Grid>
     </Grid>

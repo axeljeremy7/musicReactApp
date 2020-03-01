@@ -4,7 +4,7 @@ import { SearchContext } from "../../context/searchContext";
 
 
 const Search: React.FC = () => {
- const {state} = useContext(SearchContext)
+ const {state} = useContext(SearchContext);
   
 return <div>Search - {JSON.stringify({state})}</div>;
 };

@@ -10,12 +10,6 @@ import Twitter from "../Icons/twitter";
 import { ToggleSidebarContext } from "../../context/toggleSidebar";
 
 const Column = styled(Grid)`
-  transition: all 0.2s ease-in;
-
-  div.item-name {
-    transition: all 0.2s ease-in;
-  }
-
   a {
     text-decoration: none;
     height: 52px;
@@ -41,13 +35,13 @@ const Sidebar: React.FC = () => {
 
   return (
     <Column
-      id="#sidebar"
       width={toggleSidebar.state.show ? "150px" : "0px"}
       height="calc(100vh - 60px)"
       backgroundColor="var(--charleston-green-dark)"
       color="white"
       padding="20px 0 0 0"
       templateRows="repeat(7, 52px) 328px"
+      className="sidebar"
     >
       {pages.map((item: any, index: number) => {
         return (
@@ -72,22 +66,22 @@ const Sidebar: React.FC = () => {
         </Grid>
         <Grid justifyContent="center">
           <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-            <Snapchat color="white" height="44px" width="44px"></Snapchat>
+            <Snapchat color="white" height="44px" width="44px"/>
           </a>
         </Grid>
         <Grid justifyContent="center">
           <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-            <Instagram color="white" height="44px" width="44px"></Instagram>
+            <Instagram color="white" height="44px" width="44px"/>
           </a>
         </Grid>
         <Grid justifyContent="center">
           <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-            <Facebook color="white" height="44px" width="44px"></Facebook>
+            <Facebook color="white" height="44px" width="44px"/>
           </a>
         </Grid>
         <Grid justifyContent="center">
           <a className='no-hover' href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-            <Twitter color="white" height="44px" width="44px"></Twitter>
+            <Twitter color="white" height="44px" width="44px"/>
           </a>
         </Grid>
       </Grid>
