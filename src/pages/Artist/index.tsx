@@ -6,18 +6,18 @@ import Heart from "../../components/Icons/Heart";
 import Share from "../../components/Icons/Share";
 import AlbumSlider from "../../components/AlbumSlider";
 import { ISong, IAlbum } from "../Album";
-export interface IArtist {
-  id: number;
-  img: string;
-  name: string;
-}
-
 // Requested Artist: {JSON.stringify(params)}
 // let params = useParams();
 let bgImageUrl =
   "url(https://ksassets.timeincuk.net/wp/uploads/sites/55/2019/09/post-malone-saint-tropez-music-video@2000x1270.jpg);";
 let artistImageUrl =
   "https://i1.sndcdn.com/artworks-000138655459-s0lv9h-t500x500.jpg";
+
+export interface IArtist {
+  id: number;
+  img: string;
+  name: string;
+}
 
 let artist = {
   id: 1,
