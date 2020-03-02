@@ -24,6 +24,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .background-fit {
@@ -31,6 +32,25 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a.hover-color:hover {
+  color: var(--yellow) !important;
+}
+
+.upload-page-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 500px;
+  grid-column-gap: 20px;
+  font-size: 32px;
+  color: var(--platinum);
+}
+
+.upload-song{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

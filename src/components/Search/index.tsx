@@ -27,7 +27,7 @@ const Search: React.FC<Props> = () => {
       dispatch({type:'setSearchValue', searchValue: value.trim() })
       history.push('/Search');
     }
-  }, []);
+  }, [dispatch, history]);
 
   return (
     <Input

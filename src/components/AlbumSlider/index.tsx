@@ -1,13 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Grid } from "../Styles";
 import styled from "styled-components";
-import { ToggleSidebarContext } from "../../context/toggleSidebar";
 import Prev from "../Icons/prev";
 import Next from "../Icons/next";
 import { Link } from "react-router-dom";
-import { IArtist } from "../../pages/Artist";
-import { ISong, IAlbum } from "../../pages/Album";
-import Heart from "../Icons/Heart";
+import { ISong } from "../../pages/Album";
 import Play from "../Icons/Play";
 import Plus from "../Icons/Plus";
 import Star from "../Icons/Star";

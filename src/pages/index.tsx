@@ -10,39 +10,42 @@ import NotFound from "./NotFound";
 import Album from './Album';
 import Upload from './Upload';
 import Search from './Search';
+import Soundtrack from './Soundtrack';
+import React from "react";
 
 export interface IPage {
-  routeProps: {
-    path: string;
-    component: React.FC;
-    exact?: boolean;
-  };
-  name: String;
+    routeProps: {
+        path: string;
+        component: React.FC;
+        exact?: boolean;
+    };
+    name: String;
 }
 
 export const sidebarPages = [
-  Home,
-  Artists,
-  Music,
-  DJs,
-  Events,
-  Library,
-  MusicVenues,
+    Home,
+    Artists,
+    Music,
+    DJs,
+    Events,
+    Library,
+    MusicVenues,
 ];
 
 const Pages: Array<IPage> = [
-  Home,
-  Album,
-  Artist,
-  Artists,
-  Music,
-  DJs,
-  Events,
-  Library,
-  MusicVenues,
-  Upload,
-  Search,
-  NotFound
+    Home,
+    Album,
+    Artist,
+    Artists,
+    Music,
+    DJs,
+    Events,
+    Library,
+    MusicVenues,
+    Upload,
+    Search,
+    Soundtrack,
+    NotFound
 ];
 
 export default Pages;
