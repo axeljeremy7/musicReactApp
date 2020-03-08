@@ -16,6 +16,7 @@ import {
 } from "./context/toggleSidebar";
 import styled from "styled-components";
 import { SearchContext, SearchReducer, SearchInitialState } from "./context/searchContext";
+import MusicPlayer from './components/MusicPlayer';
 // import Login from './pages/Login';
 
 const Content = styled(Grid)`
@@ -59,7 +60,8 @@ const App: React.FC = () => {
               width="100%"
               alignItems="start"
               backgroundColor="var(--dark-medium-grey)"
-              height="calc(100vh - 60px)"
+              height="calc(100vh - 60px - 50px)"
+              margin={'0 0 50px 0'}
             >
               <Switch>
                 <Redirect from="/" to="/Music" exact />
@@ -69,6 +71,7 @@ const App: React.FC = () => {
               </Switch>
             </Content>
           </Grid>
+          <MusicPlayer/>
         </ToggleSidebarContext.Provider>
       </SearchContext.Provider>
     </Router>

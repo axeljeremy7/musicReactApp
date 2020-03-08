@@ -4,7 +4,7 @@ import { Grid, Image } from "../../components/Styles";
 import Heart from "../../components/Icons/Heart";
 import Share from "../../components/Icons/Share";
 import AlbumSlider from "../../components/AlbumSlider";
-import { ISong, IAlbum } from "../Album";
+import { ISong, IAlbum, songs } from "../Album";
 
 
 export interface IArtist {
@@ -24,173 +24,19 @@ let artist = {
   genre: "Pop"
 };
 
-let albumObject: IAlbum = {
-  id: 1,
-  name: "Beerbongs & Bentleys",
-  artistName: "Post Malone",
-  genre: "Pop/Hip-Hop/R&B",
-  year: "2018",
-  numberOfSongs: 18,
-  image:
-    "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-};
+// let albumObject: IAlbum = {
+//   id: 1,
+//   name: "Beerbongs & Bentleys",
+//   artistName: "Post Malone",
+//   genre: "Pop/Hip-Hop/R&B",
+//   year: "2018",
+//   numberOfSongs: 18,
+//   image:
+//     "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
+// };
 
-const topSongs: Array<ISong> = [
-  {
-    id: 1,
-    num: 1,
-    name: "Paranoid",
-    explicit: false,
-    star: false,
-    length: "3:44",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 2,
-    num: 2,
-    name: "Spoil My Night",
-    explicit: true,
-    star: false,
-    length: "3:54",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 3,
-    num: 3,
-    name: "Rich & Sad",
-    explicit: true,
-    star: true,
-    length: "3:14",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 4,
-    num: 4,
-    name: "Zack and Codeine",
-    explicit: true,
-    star: false,
-    length: "3:23",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 5,
-    num: 5,
-    name: "Takin' Shots",
-    explicit: true,
-    star: true,
-    length: "3:37",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 6,
-    num: 6,
-    name: "Rockstar (feat. 21 Savage)",
-    explicit: true,
-    star: true,
-    length: "3:39",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 7,
-    num: 7,
-    name: "Over Now",
-    explicit: true,
-    star: true,
-    length: "4:07",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 8,
-    num: 8,
-    name: "Psycho (feat. Ty Dolla Sign)",
-    explicit: true,
-    star: true,
-    length: "3:41",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 9,
-    num: 9,
-    name: "Better Now",
-    explicit: true,
-    star: true,
-    length: "3:50",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 10,
-    num: 10,
-    name: "Ball for Me (feat. Nicki Minaj)",
-    explicit: true,
-    star: true,
-    length: "3:27",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 11,
-    num: 11,
-    name: "Otherside",
-    explicit: true,
-    star: false,
-    length: "3:48",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 12,
-    num: 12,
-    name: "Stay",
-    explicit: true,
-    star: false,
-    length: "3:28",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 13,
-    num: 13,
-    name: "Blame It on Me",
-    explicit: true,
-    star: false,
-    length: "4:24",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  },
-  {
-    id: 14,
-    num: 14,
-    name: "Same Bitches (feat. G-Eazy and YG)",
-    explicit: true,
-    star: false,
-    length: "3:31",
-    album: albumObject,
-    img:
-      "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-  }
-];
+const topSongs: Array<ISong> = songs;
+
 const Artist: React.FC = () => {
   return (
     <Grid>

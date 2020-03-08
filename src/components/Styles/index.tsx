@@ -41,6 +41,12 @@ interface GridProps {
   readonly cursor?: string;
   readonly lineHeight?: string;
   readonly backgroundImage?: string;
+  readonly position?: string;
+  readonly top?: string;
+  readonly bottom?: string;
+  readonly left?: string;
+  readonly right?: string;
+  readonly zIndex?: string;
 }
 
 export const Grid = styled.div<GridProps>`
@@ -74,6 +80,15 @@ export const Grid = styled.div<GridProps>`
   text-align: ${props => (props.textAlign ? props.textAlign : "unset")};
   cursor: ${props => (props.cursor ? props.cursor : "auto")};
   background-image: ${props => (props.backgroundImage ? props.backgroundImage : "unset")};
+  
+  &.position {
+    position: ${props => (props.position ? props.position : "unset")};
+    top: ${props => (props.top ? props.top : "unset")};
+    bottom: ${props => (props.bottom ? props.bottom : "unset")};
+    left: ${props => (props.left ? props.left : "unset")};
+    right: ${props => (props.right ? props.right : "unset")};
+    z-index: ${props => (props.zIndex ? props.zIndex : "unset")};;
+  }
 `;
 
 interface ImageProps {

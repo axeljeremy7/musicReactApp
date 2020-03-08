@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Grid } from "../Styles";
 import styled from "styled-components";
-import Prev from "../Icons/prev";
-import Next from "../Icons/next";
 import { Link } from "react-router-dom";
 import { ISong } from "../../pages/Album";
 import Play from "../Icons/Play";
 import Plus from "../Icons/Plus";
 import Star from "../Icons/Star";
 import Explicit from "../Icons/Explicit";
+import Prev from "../Icons/Prev";
+import Next from "../Icons/Next";
 
 interface ImageProps {
   readonly display?: string;
