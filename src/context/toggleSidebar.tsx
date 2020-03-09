@@ -19,7 +19,7 @@ export const ToggleSidebarContext = createContext({} as ToggleSidebarInitContext
 export const ToggleSidebarReducer: Reducer<ToggleSidebarProps, Actions> = (state, action) => {
     switch (action.type) {
         case 'setShow':
-            if(state.show === false){
+            if(!state.show){
                 return { ...state, show: true};
             }
             return { ...state, show: false};
