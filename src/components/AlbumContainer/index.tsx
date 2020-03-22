@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Grid, Image} from "../Styles";
 import Star from "../Icons/Star";
 import Explicit from "../Icons/Explicit";
+import {ISong, songList} from "../../context/MusicPlayer";
 
 export interface IAlbumContainer
 {
@@ -11,10 +12,25 @@ export interface IAlbumContainer
     explicit: boolean;
     albumName: string;
     borderRadius: string;
+    songId?: number;
 }
 
 
-const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, explicit, albumName, borderRadius}) => {
+const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, explicit, albumName, borderRadius, songId}) => {
+    const [songPlaying, setSongPlaying] = useState<undefined|ISong>(undefined);
+    useEffect(() => {
+        const abortController = new AbortController();
+
+        if(songId){
+            console.log({songId});
+            const song = songList.find(item => item.id === songId + 1);
+            setSongPlaying(song);
+        }
+        return () => {
+           abortController.abort()
+        };
+    }, [songId, albumName]);
+
     return (
         <Grid
             templateColumns="50px auto 24px 24px"
@@ -23,7 +39,7 @@ const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, 
             <Image
                 width={"50px"}
                 height={"50px"}
-                src={albumImage}
+                src={songId ? songPlaying?.album.image : albumImage}
                 borderRadius={borderRadius}
                 className="show"
             />
@@ -40,10 +56,10 @@ const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, 
                     columnGap="8px"
                 >
                     <Grid color="var(--platinum)" fontSize={songName.length < 20 ? "14px" : "10px"} cursor='pointer'>
-                        {songName}
+                        {songId ? songPlaying?.name : songName}
                     </Grid>
 
-                    {star && (
+                    {songPlaying  && songPlaying.star && (
                         <Grid><Star
                             color="#66717E"
                             width="8px"
@@ -52,7 +68,24 @@ const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, 
                     )}
 
 
-                    {explicit && (
+                    {songPlaying  &&  songPlaying.explicit && (
+                        <Grid><Explicit
+                            color="#66717E"
+                            width="8px"
+                            height="8px"
+                        /></Grid>
+                    )}
+
+                    {!songPlaying  && star && (
+                        <Grid><Star
+                            color="#66717E"
+                            width="8px"
+                            height="8px"
+                        /></Grid>
+                    )}
+
+
+                    {!songPlaying  &&  explicit && (
                         <Grid><Explicit
                             color="#66717E"
                             width="8px"
@@ -62,7 +95,7 @@ const AlbumContainer: React.FC<IAlbumContainer> = ({albumImage, songName, star, 
 
                 </Grid>
                 <Grid color='var(--aurora)' fontSize='12px'>
-                    {albumName}
+                    {songId ? songPlaying?.album.name : albumName}
                 </Grid>
             </Grid>
         </Grid>);

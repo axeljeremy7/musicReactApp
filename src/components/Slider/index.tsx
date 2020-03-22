@@ -5,8 +5,7 @@ import { ToggleSidebarContext } from "../../context/toggleSidebar";
 import Prev from "../Icons/Prev";
 import Next from "../Icons/Next";
 import { Link } from "react-router-dom";
-import { IArtist } from "../../pages/Artist";
-import { IAlbum } from "../../pages/Album";
+import {IAlbum, IArtist} from "../../context/MusicPlayer";
 
 interface ImageProps {
   readonly display?: string;

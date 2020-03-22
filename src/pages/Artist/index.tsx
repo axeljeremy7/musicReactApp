@@ -4,38 +4,7 @@ import { Grid, Image } from "../../components/Styles";
 import Heart from "../../components/Icons/Heart";
 import Share from "../../components/Icons/Share";
 import AlbumSlider from "../../components/AlbumSlider";
-import { ISong, IAlbum, songs } from "../Album";
-
-
-export interface IArtist {
-  id: number;
-  img: string;
-  name: string;
-}
-
-let artist = {
-  id: 1,
-  backgroundImage:
-    "https://ksassets.timeincuk.net/wp/uploads/sites/55/2019/09/post-malone-saint-tropez-music-video@2000x1270.jpg",
-  image: "https://i1.sndcdn.com/artworks-000138655459-s0lv9h-t500x500.jpg",
-  name: "Post Malone",
-  place: "Seanhaven, OR",
-  country: "US",
-  genre: "Pop"
-};
-
-// let albumObject: IAlbum = {
-//   id: 1,
-//   name: "Beerbongs & Bentleys",
-//   artistName: "Post Malone",
-//   genre: "Pop/Hip-Hop/R&B",
-//   year: "2018",
-//   numberOfSongs: 18,
-//   image:
-//     "https://static.spin.com/files/2018/05/beerbongs-bentleys-cover-1525284635-640x543.jpg"
-// };
-
-const topSongs: Array<ISong> = songs;
+import {artist, songList} from "../../context/MusicPlayer";
 
 const Artist: React.FC = () => {
   return (
@@ -58,7 +27,7 @@ const Artist: React.FC = () => {
               width="200px"
               height="200px"
               borderRadius="50%"
-              src={artist.image}
+              src={artist.img}
               alt="artist image in circle"
             />
             <Grid
@@ -94,7 +63,7 @@ const Artist: React.FC = () => {
       </Grid>
       <Grid padding='0 8px 0 8px'>
         <AlbumSlider
-          array={topSongs}
+          array={songList}
           numOfElements={9}
           title="Top Songs"
           type="SONG"

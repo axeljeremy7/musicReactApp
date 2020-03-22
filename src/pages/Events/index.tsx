@@ -7,7 +7,7 @@ const Events: React.FC = () => {
             Events
         </div>
     )
-}
+};
 
 const Page: IPage =   {
     routeProps: {
