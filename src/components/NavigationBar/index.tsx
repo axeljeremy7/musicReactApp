@@ -7,6 +7,7 @@ import Upload from "../Icons/upload";
 import { ToggleSidebarContext } from "../../context/toggleSidebar";
 import { Link } from "react-router-dom";
 
+//@ts-ignore
 const TopNavBar = styled(Grid)`
   position: -webkit-sticky;
   position: sticky;
